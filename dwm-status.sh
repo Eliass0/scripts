@@ -9,6 +9,6 @@ while true; do
         # Battery doesn't exist, just display time
         status="$(date +"%Y-%m-%d %H:%M")"
     fi
-    xsetroot -name "$status"
+    xsetroot -name "$status" 2>/dev/null || break
     sleep 1
 done
